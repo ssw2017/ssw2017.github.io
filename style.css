@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@400&display=swap");
 
 
-header {
+header,footer {
    text-align: center;
  }
 
@@ -65,6 +65,6 @@ hr {
 .image-circle {
   border-radius: 50%;
   border: 2px solid #003049;
-  display: block; 
+  display: block;
   margin: 0 auto; /
 }

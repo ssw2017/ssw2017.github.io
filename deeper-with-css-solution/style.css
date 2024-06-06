@@ -45,7 +45,12 @@ h3 {
 
 /* Header */
 header {
-  text-align: right;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+  justify-content: center;
 }
 
 /* Containers */

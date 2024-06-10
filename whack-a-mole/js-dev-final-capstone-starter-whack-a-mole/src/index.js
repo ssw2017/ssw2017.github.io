@@ -4,7 +4,7 @@ const startButton = document.querySelector('#start');
 const score = document.querySelector('#score'); // Use querySelector() to get the score element
 const timerDisplay = document.querySelector('#timer'); // use querySelector() to get the timer element.
 
-const hammerSound = new Audio("https://github.com/ssw2017/js-dev-final-capstone-starter-whack-a-mole/blob/main/assets/bubleForHit.mp3?raw=true");
+const hammerSound = new Audio("https://github.com/sedo-swe/js-dev-final-capstone-starter-whack-a-mole/blob/main/assets/bubleForHit.mp3?raw=true");
 const hammerCursor = document.querySelector('#hammer');
 
 let time = 0;
@@ -16,7 +16,7 @@ let difficulty = "hard";
 /**
  * Generates a random integer within a range.
  *
- * The function takes two values as parameters that limits the range
+ * The function takes two values as parameters that limits the range 
  * of the number to be generated. For example, calling randomInteger(0,10)
  * will return a random integer between 0 and 10. Calling randomInteger(10,200)
  * will return a random integer between 10 and 200.
@@ -35,7 +35,7 @@ function randomInteger(min, max) {
  * return 1000. If difficulty is set to "hard" it should return a randomInteger between
  * 600 and 1200.
  *
- * Example:
+ * Example: 
  * setDelay("easy") //> returns 1500
  * setDelay("normal") //> returns 1000
  * setDelay("hard") //> returns 856 (returns a random number between 600 and 1200).
@@ -58,10 +58,10 @@ function setDelay(difficulty) {
  * 1. generate a random integer from 0 to 8 and assign it to an index variable
  * 2. get a random hole with the random index (e.g. const hole = holes[index])
  * 3. if hole === lastHole then call chooseHole(holes) again.
- * 4. if hole is not the same as the lastHole then keep track of
+ * 4. if hole is not the same as the lastHole then keep track of 
  * it (lastHole = hole) and return the hole
  *
- * Example:
+ * Example: 
  * const holes = document.querySelectorAll('.hole');
  * chooseHole(holes) //> returns one of the 9 holes that you defined
  */
@@ -131,7 +131,7 @@ function showUp() {
 */
 function showAndHide(hole, delay){
   toggleVisibility(hole);
-
+  
   const timeoutID = setTimeout(() => {
     toggleVisibility(hole)
     gameOver();
@@ -141,7 +141,7 @@ function showAndHide(hole, delay){
 
 /**
 *
-* Adds or removes the 'show' class that is defined in styles.css to
+* Adds or removes the 'show' class that is defined in styles.css to 
 * a given hole. It returns the hole.
 *
 */
@@ -155,8 +155,8 @@ function toggleVisibility(hole){
 * This function increments the points global variable and updates the scoreboard.
 * Use the `points` global variable that is already defined and increment it by 1.
 * After the `points` variable is incremented proceed by updating the scoreboard
-* that you defined in the `index.html` file. To update the scoreboard you can use
-* `score.textContent = points;`. Use the comments in the function as a guide
+* that you defined in the `index.html` file. To update the scoreboard you can use 
+* `score.textContent = points;`. Use the comments in the function as a guide 
 * for your implementation:
 *
 */
@@ -279,9 +279,9 @@ function startGame() {
 const moveCursor = (e)=> {
   const mouseY = e.clientY;
   const mouseX = e.clientX;
-
+   
   hammerCursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-
+ 
 }
 
 window.addEventListener('mousemove', moveCursor)
